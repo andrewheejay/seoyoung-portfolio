@@ -72,16 +72,15 @@ p { margin: 0; }
 .r7x10 { aspect-ratio: 7 / 10; }
 .r1x1 { aspect-ratio: 1 / 1; }
 .r4x5 { aspect-ratio: 4 / 5; }
+.r245x436 { aspect-ratio: 245 / 436; }
+.r610x457 { aspect-ratio: 610 / 457; }
 /* Hand-set crops carried over from the prototype */
 .pos-lunchbox { object-position: 50% 85%; }
-.pos-bottles { object-position: 50% 49.5%; }
 .pos-card { object-position: 0% 50%; }
 .pos-cranes { object-position: center 38%; }
 .pos-materials { object-position: 55% center; }
 .pos-sunset { object-position: center 60%; }
 .zoom img { inset: auto; left: 59.83%; top: 44.45%; width: 251.8%; height: 161.9%; max-width: none; transform: translate(-50%, -50%); object-fit: fill; }
-.placeholder { background: var(--paper); }
-.placeholder::after { content: attr(data-note); position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 16px; text-align: center; font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
 
 /* Project rows */
 .project, .elsewhere { border-top: 1px solid var(--ink); padding: 20px 0 var(--section-gap); }
@@ -106,9 +105,9 @@ p { margin: 0; }
 .stats { display: flex; flex-wrap: wrap; gap: 20px 48px; margin-top: 20px; }
 .stat-n { font-family: var(--serif); font-weight: 500; font-size: clamp(36px, 3.4vw, 48px); line-height: 1; }
 .stat-l { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
-.relief-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 24px; align-items: start; }
-.poster { grid-row: span 2; }
-.poster img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: top; border: 1px solid var(--rule); }
+/* step 04: two .row rows (see 03 below); each figure's flex-grow is its photo's width / height */
+.relief-row { margin-top: 24px; }
+.poster img { width: 100%; aspect-ratio: 1400 / 1986; object-fit: cover; border: 1px solid var(--rule); }
 
 /* 02 / 03 / 04 — text beside a portrait photo */
 .split { display: flex; flex-wrap: wrap; gap: 32px 48px; margin-top: 28px; align-items: flex-start; }
@@ -122,7 +121,7 @@ p { margin: 0; }
 .span3 { grid-column: span 3; }
 .span2 { grid-column: span 2; }
 
-/* 03 — two rows, widths proportional to each photo's aspect ratio */
+/* 01 step 04 & 03 — two-up rows, widths proportional to each photo's aspect ratio */
 .row { display: flex; gap: 24px; align-items: flex-start; }
 .row-a { margin-top: 44px; }
 .row-b { margin-top: 24px; }
@@ -130,6 +129,9 @@ p { margin: 0; }
 .w067 { flex: .667 1 0; min-width: 0; }
 .w086 { flex: .857 1 0; min-width: 0; }
 .w125 { flex: 1.25 1 0; min-width: 0; }
+.w071 { flex: .705 1 0; min-width: 0; }
+.w056 { flex: .562 1 0; min-width: 0; }
+.w134 { flex: 1.335 1 0; min-width: 0; }
 
 /* 04 — three-up rows */
 .photos-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 24px; margin-top: 24px; }
